@@ -82,3 +82,5 @@ Incluir a chave estrangeira #Id_Laboratório em Equipamento, já que Laboratóri
 1. Modelo ER: Remover entidades desnecessárias (Cliente, Contrato), corrigir cardinalidades para usar a notação (mínimo,máximo) e ajustar a modelagem de generalização/especialização de Checagens.
 
 2. Modelo Lógico Relacional: Corrigir tabelas geradas por relacionamentos (Detém e Possui não geram tabelas), adicionar chaves estrangeiras corretamente, herança de Checagem, e modelar corretamente o relacionamento Sofre como n
+
+https://lucid.app/lucidchart/6c3ff848-9286-4b4c-b0f9-c0b6f4afef14/edit?invitationId=inv_baaa2c2c-c4db-4edf-a654-9594a90d5a41&page=0_0#
