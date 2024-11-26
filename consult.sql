@@ -78,11 +78,16 @@ LEFT JOIN Calibracao cal ON e.TAG_Identificacao = cal.TAG_Equipamento
 LEFT JOIN Qualificacao q ON e.TAG_Identificacao = q.TAG_Equipamento
 ORDER BY c.Nome;
 
--- Consulta 6: Usando Operadores de Conjunto (UNIÃO)
-SELECT ID_Funcionario, Nome FROM Funcionario
+-- Consulta 6: União entre funcionários e clientes com base nos laboratórios e equipamentos
+SELECT DISTINCT f.Nome AS Nome, 'Funcionario' AS Tipo
+FROM Funcionario f
+INNER JOIN Laboratorio l ON f.ID_Laboratorio = l.ID_Laboratorio
+INNER JOIN Equipamento e ON l.ID_Laboratorio = e.ID_Laboratorio
 UNION
-SELECT ID_Funcionario, Nome FROM Funcionario
-ORDER BY Nome;
+SELECT DISTINCT c.Nome AS Nome, 'Cliente' AS Tipo
+FROM Cliente c
+INNER JOIN Equipamento_Cliente ec ON c.ID_Cliente = ec.ID_Cliente
+INNER JOIN Equipamento e ON ec.TAG_Equipamento = e.TAG_Identificacao;
 
 -- Consulta 7: Consulta envolvendo Checagem e outros detalhes
 SELECT 
