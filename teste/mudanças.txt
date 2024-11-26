@@ -1,0 +1,24 @@
+Mudanças Feitas
+Remoção de Tabelas Desnecessárias:
+
+Excluí as tabelas Cliente, Contrato, Jurídico, Serviços, Detém e Possui, pois não eram essenciais ao contexto.
+Especialização de Checagens:
+
+A tabela Checagem agora é uma base comum para Manutenção e Calibração, refletindo especializações de inspeções.
+Relacionamentos Simplificados:
+
+A tabela Equipamento tem chaves estrangeiras para Laboratorio e Fornecedor, eliminando tabelas intermediárias como Detém e Possui.
+Ajuste de Cardinalidades:
+
+Cada Equipamento pertence a um único Laboratorio e pode ser fornecido por apenas um Fornecedor.
+Padronização:
+
+Nomes de colunas, tipos de dados e estruturas de tabelas foram uniformizados.
+Inserções de Dados Atualizadas:
+
+Exemplos práticos foram ajustados para refletir o novo modelo.
+Benefícios da Correção
+Clareza: O modelo está mais próximo do domínio do problema e é mais fácil de entender.
+Eficiência: Relacionamentos desnecessários foram removidos, otimizando o armazenamento e as consultas.
+Consistência: As tabelas e os dados refletem o objetivo principal do banco de dados: gerenciar equipamentos, manutenções e calibrações em laboratórios.
+Se precisar de mais ajustes ou de explicações adicionais, posso ajudar!
